@@ -10,7 +10,9 @@ def screen_grab():
 
 
 def main():
+    print("hi, im noobert owo")
     screen_grab()
+    print("scweenshot compwete! uwu")
 
 
 if __name__ == '__main__':
