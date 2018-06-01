@@ -107,6 +107,28 @@ class Cord:
     delivery_norm = (487, 294)
 
 
+def clear_tables():
+    mouse_pos((91, 207))
+    left_click()
+
+    mouse_pos((191, 208))
+    left_click()
+
+    mouse_pos((292, 207))
+    left_click()
+
+    mouse_pos((400, 209))
+    left_click()
+
+    mouse_pos((495, 210))
+    left_click()
+
+    mouse_pos((596, 208))
+    left_click()
+
+    time.sleep(1)
+
+
 def main():
     pass
 
