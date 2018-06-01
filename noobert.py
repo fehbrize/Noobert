@@ -1,3 +1,16 @@
+"""
+
+Plate cords:
+
+91, 207
+191, 208
+292, 207
+400, 209
+495, 210
+596, 208
+
+"""
+
 from PIL import ImageGrab
 import time
 import os
@@ -66,6 +79,32 @@ def start_game():
     mouse_pos((301, 379))
     left_click()
     time.sleep(.1)
+
+
+class Cord:
+
+    f_shrimp = (35, 355)
+    f_rice = (88,328)
+    f_nori = (30, 388)
+    f_roe = (91, 384)
+    f_salmon = (33, 443)
+    f_unagi = (97, 437)
+
+    phone = (556, 350)
+
+    menu_toppings = (513, 273)
+
+    t_shrimp = (487, 220)
+    t_nori = (581, 226)
+    t_roe = (489, 283)
+    t_salmon = (572, 282)
+    t_unagi = (494, 330)
+    t_exit = (598, 332)
+
+    menu_rice = (514, 293)
+    buy_rice = (545, 292)
+
+    delivery_norm = (487, 294)
 
 
 def main():
