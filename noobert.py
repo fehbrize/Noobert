@@ -12,6 +12,8 @@ Plate cords:
 """
 
 from PIL import ImageGrab
+from PIL import ImageOps
+from numpy import *
 import time
 import os
 import win32api, win32con
@@ -127,6 +129,221 @@ def clear_tables():
     left_click()
 
     time.sleep(1)
+
+
+def fold_mat():
+    mouse_pos((Cord.f_rice[0] + 50, Cord.f_rice[1]))
+    left_click()
+    time.sleep(.1)
+
+
+def make_food(food):
+
+    if food == 'caliroll':
+        print('Making a caliwoll ovo')
+
+        mouse_pos(Cord.f_rice)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_nori)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_roe)
+        left_click()
+        time.sleep(.1)
+
+        fold_mat()
+        time.sleep(1.5)
+
+    elif food == "onigiri":
+        print('Making an onigiwi *owo*')
+
+        mouse_pos((Cord.f_rice))
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_rice)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_nori)
+        left_click()
+        time.sleep(.1)
+
+        fold_mat()
+        time.sleep(1.5)
+
+    elif food == "gunkan":
+        print("Making a gunkan maki *w*")
+
+        mouse_pos(Cord.f_rice)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_nori)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_roe)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_roe)
+        left_click()
+        time.sleep(.1)
+
+        fold_mat()
+        time.sleep(1.5)
+
+    elif food == "salmon":
+        print("Making a salmon roll uwu")
+
+        mouse_pos(Cord.f_rice)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_nori)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_salmon)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_salmon)
+        left_click()
+        time.sleep(.1)
+
+        fold_mat()
+        time.sleep(1.5)
+
+    elif food == 'shrimp':
+        print('Making a shrimp sushi ^u^')
+
+        mouse_pos(Cord.f_rice)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_nori)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_shrimp)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_shrimp)
+        left_click()
+        time.sleep(.1)
+
+        fold_mat()
+        time.sleep(1.5)
+
+    elif food == 'unagi':
+        print('Making an unagi woll ovo')
+
+        mouse_pos(Cord.f_rice)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_nori)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_unagi)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_unagi)
+        left_click()
+        time.sleep(.1)
+
+        fold_mat()
+        time.sleep(1.5)
+
+    elif food == 'dragon':
+        print('Making a dwagon woll owo')
+
+        mouse_pos(Cord.f_rice)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_rice)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_nori)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_unagi)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_unagi)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_roe)
+        left_click()
+        time.sleep(.1)
+
+        fold_mat()
+        time.sleep(1.5)
+
+    elif food == 'combo':
+        print('Making a combo sushi uvu')
+
+        mouse_pos(Cord.f_rice)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_rice)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_nori)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_roe)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_salmon)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_unagi)
+        left_click()
+        time.sleep(.05)
+
+        mouse_pos(Cord.f_shrimp)
+        left_click()
+        time.sleep(.1)
+
+        fold_mat()
+        time.sleep(1.5)
+
+def buy_food(food):
+
+    mouse_pos(Cord.phone)
+
+    mouse_pos(Cord.menu_toppings)
+
+    mouse_pos(Cord.t_shrimp)
+    mouse_pos(Cord.t_nori)
+    mouse_pos(Cord.t_roe)
+    mouse_pos(Cord.t_salmon)
+    mouse_pos(Cord.t_unagi)
+    mouse_pos(Cord.t_exit)
+
+    mouse_pos(Cord.menu_rice)
+    mouse_pos(Cord.buy_rice)
+
+    mouse_pos(Cord.delivery_norm)
 
 
 def main():
